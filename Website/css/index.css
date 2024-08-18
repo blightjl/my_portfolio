@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: rgb(234, 225, 225);
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+
+a:visited {
+    color: black;
+}
+
+.key-word {
+    color: red;
+    font-weight: bold;
+}
+
+.topbar {
+  position: fixed;
+  display: flex;         
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  height: 12.3%;
+  top: 0%;
+  left: 0%;
+  padding-bottom: 0.5%;
+  /* background-color: #fc7c7c; */
+  /* background-color: rgb(220, 243, 195); */
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+  z-index: 7;
+}
+
+
+/* change the following */
+
+.title_icon {
+  font-family: cursive;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  z-index: 11;
+  text-shadow: 1px 1px rgb(234, 225, 225);
+}
+
+.navbar {
+  background-color: transparent;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Underline styles */
+.navbar a {
+  text-decoration: none;
+  position: relative; 
+  display: inline-block;
+  transition: text-shadow 0.3s ease;
+  font-weight: bold;
+  text-shadow: 0.8px 0.8px rgb(234, 225, 225);
+}
+
+.navbar a:hover {
+  transition: opacity 500ms, transform 500ms;
+  text-shadow: 2px 2px red;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a.active {
+    text-shadow: 4px 4px white;
+    transition: text-shadow 0.3s ease;
+}
+
+/* Bracket effect styles */
+.navbar a::after {
+  content: '>';
+  position: absolute;
+  left: -0.8em;
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  color: black; 
+  font-size: 1em;
+  padding-bottom: 3px;
+}
+
+/* Show bracket on hover */
+.navbar a:hover::after,
+.navbar a:focus::after,
+.navbar a.active::after {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  transition: opacity 150ms, transform 150ms;
+}
+
+.profile-picture {
+  width: 400px;
+  height: 400px;
+}
+
+.profile-picture-layer {
+  width: 450px;
+  height: 450px;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+  width: 22.5px;
+  height: 22.5px;
+  float: right;
+}
+
+.scrollable-section {
+  flex-direction: column;
+  align-items: center;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-section {
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title_icon {
+  margin: none;
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease, text-shadow 0.25s ease, transform 0.9s ease;
+}
+
+/* Animate text and shadows on hover */
+.title_icon:hover,
+.title_icon:focus,
+.title_icon.active {
+  color: transparent;
+  transform: scale(1.1);
+  text-shadow: 
+      4px -4px 0 black,
+      -4px 4px 0 white;
+  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.7s ease;
+}
+
+.content {
+  margin-top: 100px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  padding-bottom: 100px;
+}
+
+.homepage {
+  display: flex;         
+  flex-direction: column;   
+  align-items: center;     
+  width: 100%; 
+  background-color: transparent;
+}
+
+.bio {
+  width: 60%;
+}
+
+.home-social-icon {
+  width: 33px;
+  height: 33px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.home-social-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+/* !NOTE: add another bar below my name w/ div shadow */
+.sources {
+  bottom: 0px;
+}
+
+.info-container {
+  position: relative;
+  display: inline-block;
+}
+
+.info-button {
+  width: 25px;
+  height: 25px;
+  background-color: #fc7c7c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  margin-left: 10px;
+}
+
+.info-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 200px;
+}
+
+.info-container:hover .info-box {
+  display: block;
+}
+
+.credit {
+  margin-top: 5%;
+}
+
+.message {
+  margin-top: 5%;
+}
+
+.inline-certificate {
+  height: 40px;
+  width: 40px;
+}
+
+.project-date {
+  margin-top: 0;
+}
+
+.project-title {
+  margin-bottom: 5px;
+}
+
+ul li {
+  padding: 10px 0;
+}
+
+/* underline effect for name */
+.underline-effect {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.underline-effect::after {
+  content: '';
+  /* margin-top: 0px;
+  padding-top: 1px; */
+  position: absolute;
+  left: 0;
+  bottom: -1.5px; 
+  width: 100%; 
+  height: 4px; 
+  background: #fc7c7c; 
+  transform: scaleX(0);
+  transform-origin: right; 
+  transition: transform 0.45s ease; 
+}
+
+.underline-effect:hover::after,
+.underline-effect:focus::after {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.75s ease;
+}
+
+.name-underline-effect {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.name-underline-effect::after {
+  content: '';
+  /* margin-top: 0px;
+  padding-top: 1px; */
+  position: absolute;
+  left: 0;
+  bottom: -1.5px; 
+  width: 100%; 
+  height: 4px; 
+  background: purple; 
+  transform: scaleX(0);
+  transform-origin: right; 
+  transition: transform 0.45s ease; 
+}
+
+.name-underline-effect:hover::after,
+.underline-effect:focus::after {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.75s ease;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 30px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.bio {
+  /* flex-direction: column;
+  align-items: center; */
+  flex: 1;
+}
+
+.note {
+  color: #fc7c7c;
+  font-style: italic;
+}
+
+@media (max-width: 800px) { /* Adjust width threshold as needed */
+  .container {
+      flex-direction: column; /* Stack vertically on narrow screens */
+  }
+  .scrollable-section.bio{
+    left: 10%;
+    width: 100%;
+    margin-left: 20%; /* Remove margin when stacking */
+    margin-right: 0px;
+    margin-top: 20px; /* Add space above the right div */
+  }
+}
+
+input {
+  border-style: solid;
+  /* border: 2px; */
+  padding: 3px;
+  margin: 3px;
+  background-color: white;
+  /* border-color: purple; */
+  border-radius: 1px;
+  border-color: transparent;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input:focus-within {
+  outline: none;
+  border-color: #fc7c7c;
+  border-width: 3px;
+}
+
+textarea {
+  padding: 3px;
+  margin: 3px;
+  background-color: white;
+  /* border-color: purple; */
+  border-radius: 1px;
+  border-color: transparent;
+}
+
+textarea:focus-within {
+  outline: none;
+  border-color: #fe6161;
+  border-width: 3px;
+}
+
+button.submit {
+  align-self: center;
+  width: 55px;
+  height: 25px;
+  padding: 3px;
+  margin: 3px;
+  background-color: lightgreen;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  border-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.5s ease, box-shadow 0.3s ease,transform 0.4s ease; 
+}
+
+button.submit:hover {
+  background-color: rgb(0, 255, 30);
+  cursor: pointer;
+  transform: scale(1.1);
+  /* transition: transform 0.45s ease;  */
+  transition: background-color 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+/* index.css */
+.popup-container {
+  width: 50%;
+  height: 50%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;   
+  align-items: center;  
+  position: absolute;
+  top: -30%; /* Start off-screen, above the view */
+  left: 25%;
+  opacity: 0;
+  visibility: hidden; 
+  border-radius: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: transform 0.75s ease, opacity 1.0s ease, visibility 0s ease 1.0s; /* Delay visibility change until opacity transition ends */
+  z-index: 10;
+}
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+}
+
+.show-popup {
+  transform: translateY(105%);
+  opacity: 1; 
+  visibility: visible; /* Ensure visibility */
+  transition: transform 0.75s ease, opacity 0s ease;
+}
+
+.test-button {
+  position: absolute;
+  bottom: -10px
+}
+
+#topbar_grad {
+  background-color: #fc7c7c;
+  background-image: linear-gradient(to bottom right,#fe6161, #ffdd76);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.0s ease, visibility 1.0s ease;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#overlay.show-overlay {
+  opacity: 1; 
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 1.0s ease, visibility 1.0s ease;
+}
+
+#overlay.hide-overlay {
+  opacity: 0; 
+  visibility: hidden;
+  pointer-events: none; 
+  transition: opacity 1.0s ease, visibility 1.0s ease;
+}
+
+.form-container {
+  background-color: purple;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+https://www.reddit.com/r/golang/comments/mqulgy/where_do_you_look_for_go_jobs/ 
+https://www.golangprojects.com/golang-go-job-gql-Senior-Cloud-Administrator-San-Jose-AMD.html
+https://www.reddit.com/r/learnprogramming/comments/140gdp8/a_stepbystep_for_doing_your_first_open_source/
+*/

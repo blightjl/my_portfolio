@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Josan's portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="topbar_grad" class="topbar">
+        <h1 class="title_icon">Josan Limbu</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="writeups.html">Writeups</a></li>
+                <li><a href="contact_me.html">Contact me</a></li>
+            </ul>
+        </nav>
+    </div>
+        <!-- this is the drop down modal that will appear after a successful message submission -->
+        <div class="popup-container" id="popup">
+            <img src="../icons/success.png">
+            <h3>Success!</h3>
+            <p>Your message has been sent.</p>
+            <button class="ok-button" onClick="hideSuccess()">OK</button>
+         </div>
+         <script src="./controller.js"></script>
+    <main class="content">
+        <span class="homepage">  
+            <h3 class="underline-effect">Contact me</h3>
+            <div class="form-container">
+                <form name="contact_form" id="myForm" netlify>
+                    <!-- <form name="contact_form" id="contact-form" method="POST" netlify> -->
+                    <input type="text" id="name" name="name" placeholder="Full Name" autocomplete="off"required>
+                    <input type="text" id="title" name="title" placeholder="Title" autocomplete="off"required>
+                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="on" required>
+                    <textarea rows="5" cols="50" name="message" placeholder="Message" autocomplete="off" required></textarea>
+                    <button type="submit" class="submit">Submit</button>
+                </form>
+            </div>
+            <div class="credit">
+            <h3>Icon sources:</h3>
+            <ul>
+            <li><a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by iconsimple - Flaticon</a></li>
+            <li><a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a></li>
+            </ul>
+        </div>
+        </span>
+    </main>
+</body>
+</html>
