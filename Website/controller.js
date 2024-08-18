@@ -36,7 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
           })
-            .then(() => console.log("Form successfully submitted"))
+            .then(() => {
+                console.log("Form successfully submitted");
+                form.reset();
+            })
             .catch((error) => alert(error));
     });
 });
