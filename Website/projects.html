@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Josan's portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+</head>
+
+<body>
+    <!-- place the title_icon and navbar inside of a div that takes the same amount of space for the 
+     rest of the page contents to render right below it -->
+    <div id="topbar_grad" class="topbar">
+        <h1 class="title_icon">Josan Limbu</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="writeups.html">Writeups</a></li>
+                <li><a href="contact_me.html">Contact me</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="content">
+        <span class="homepage">
+            <h3 class="underline-effect">My Projects</h3>
+            <div>
+                <h3 class="underline-effect" style="display: inline-block">Personal Projects:</h3>
+                <div class="info-container">
+                    <button class="info-button">?</button>
+                    <div class="info-box">
+                        You are authorized to view the source code for my personal projects.
+                    </div>
+                </div>
+            </div>
+
+            <div class="scrollable-section">
+                <!-- Create a directory structure where The Writeups have sub directory between CTF Event and challenge category -->
+                <h3 class="project-title">Portfolio<a href="https://github.com/blightjl/my_portfolio"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>HTML, CSS</i></br>
+                <span class="project-date"><i>2024</i></span>
+                <p>A lightweight portfolio to demonstrate some of my projects in more detail and function as
+                    an archive.
+                </p>
+                <span class="note">
+                    Note: Written in vanilla HTML and CSS
+                    to be rewritten in React.
+                    <span>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">HedgeFollow Sweeper<a href="https://github.com/blightjl/hedgefollow_scraper"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>Python</i></br>
+                <span class="project-date"><i>2023</i></span>
+                <p>Developed a web scraper for <a href="https://hedgefollow.com" target="_blank">hedgefollow.com</a>
+                    using Python, leveraging BeautifulSoup, Selenium,
+                    requests, regular expressions, and CSS selectors. The scraper extracted data from the past 24 hours
+                    and stored it in JSON format for further analysis. This data was used to identify the greatest stock
+                    changes and percentage shifts among insiders. Using the Twitter API and cron jobs, I automated
+                    tweets to report the insiders with the largest portfolio movements in terms of magnitude and
+                    percentage when compared to all other insiders for the given time period. I also handled various
+                    edge cases as the project
+                    progressed, such as for instance, modifying the cron job to prevent it from running on weekends and
+                    ensuring smooth
+                    functionality
+                    throughout the project.</p>
+                <span class="note">
+                    Note: I plan to extend this project by developing a full-stack web application using React, ASP.NET,
+                    and SQL Server.
+                    <span>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">Chatroom + Packet Sniffer<a href="https://github.com/blightjl/ChatPlusSniffer"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>Java</i></br>
+                <span class="project-date"><i>2022</i></span>
+                </br></br>
+                Part I:
+                </br></br>As it was my first time socket programming, there was a lot of learning to do such as learning
+                what IP addresses, ports, and how data were handled at each node. It was great to see real world
+                application of programming concepts I had learned in class bring to life a chatroom, via a ‘server’ and
+                ‘clients’. I used Java’s interfaces, abstractions, and enums. I was able to easily create an interface
+                with modularity in mind for scalability and rigidity to handle different types of encryptions and their
+                respective operations where appropriate. A flaw introduced in this project was the key that was used to
+                encrypt and decrypt messages among the clients in the network. This meant that with a packet sniffer it
+                would be easy to simply intercept the key and use it to gain unauthorized access to the messages between
+                clients in the network. This is exactly what will be investigated in Part II.
+                </br></br>Part II:</br></br>An existing packet capture library called Jpcap was already available in
+                Java. Therefore, I used this library in the chatroom I created in Part I by configuring it through a
+                pom.xml file and Maven. I learned to look through the Jpcap documentation to find relevant functions to
+                intercept messages sent through plain text in the network. After extending the program a bit more, the
+                Initial Vector and Decryption Key could also be intercepted in the network as I knew the implementation
+                of the chatroom system. Further filtering and conversions in the data stream had to be made to make the
+                program run smoothly.</p>
+            </div>
+            </br>
+
+            <div>
+                <h3 class="underline-effect" style="display: inline-block">Academic Projects:</h3>
+                <div class="info-container">
+                    <button class="info-button">?</button>
+                    <div class="info-box">
+                        The source code for the following academic projects are private. You will simply be redirected
+                        to the learngo repository.
+                    </div>
+                </div>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">Secure Peer-to-Peer Messaging<a href="https://github.com/inancgumus/learngo"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>Python</i></br>
+                <span class="project-date"><i>2024</i></span>
+                <p>Utilized primitive cryptographic features from the pyca/cryptography library for
+                    python to implement a secure environment where clients are able to authenticate to a server and via
+                    this authentication, the clients are able to securely message other authenticated users.</p>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">UniSwap<a href="https://github.com/inancgumus/learngo" target="_blank"><img
+                            class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>MongoDB, ExpressJS, React, NodeJS</i></br>
+                <span class="project-date"><i>2024</i></span>
+                <p>A full-stack web application using the MERN tech stack to simulate an online thrift store.</p>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">Canvas Clone<a href="https://github.com/inancgumus/learngo"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>MongoDB, ExpressJS, React, NodeJS</i></br>
+                <span class="project-date"><i>2024</i></span>
+                <p>Used the MERN tech stack to create a full stack project that created a clone of popular
+                    education platform. Learned to use states to keep the application handle importants states
+                    throughout the web app through React and Redux. User account creation and session handling was done
+                    via ExpressJS.
+                </p>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">Distributed Key-Value Store<a href="https://github.com/inancgumus/learngo"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>Python</i></br>
+                <span class="project-date"><i>2023</i></span>
+                <p>A key-value pair data storage that was resilient against network failures that kept logs
+                    up-to-date and in order. The underlying protocol to handle this replication was <a
+                        href="https://raft.github.io/raft.pdf" target="_blank">the RAFT protocol</a> by
+                    Diego Ongaro and John Ousterhout.</p>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">Image Processor<a href="https://github.com/inancgumus/learngo"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>Java</i></br>
+                <span class="project-date"><i>2022</i></span>
+                <p>Developed a robust Java CLI program with modular classes that was able to process images into various
+                    different filters. Such as mosaic filter, and black-and-white. After completing the underlying CLI
+                    program, used the JavaFX library to for a GUI that displayed the RGB components
+                    along with histograms to for each image that was processed.</p>
+            </div>
+            <div class="scrollable-section">
+                <h3 class="project-title">Smash Bro Game<a href="https://github.com/inancgumus/learngo"
+                        target="_blank"><img class='social-icon' src='../icons/github_icon.png'></a></h3>
+                <i>C#, Unity</i></br>
+                <span class="project-date"><i>2021</i></span>
+                <p>A 2d platformer that had multiple playable characters in a smash bros-like game. With Unity
+                    handled smooth animation and various components of the game details: such as healthbars, the
+                    graphics attached to each object. How projectiles would animate out from the characters, melee
+                    attacks, and the networking part of Unity with Photon Networking. </p>
+            </div>
+            </div>
+        </span>
+    </main>
+
+
+</body>
+
+</html>
