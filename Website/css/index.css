@@ -203,13 +203,9 @@ a:visited {
   background-color: transparent;
 }
 
-.bio {
-  width: 60%;
-}
-
 .home-social-icon {
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 50%;
@@ -352,25 +348,34 @@ ul li {
 
 .container {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 5%;
+  box-sizing: border-box;
 }
 
 .profile {
+  width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-left: 30px;
-  margin-right: 10px;
-  flex: 1;
 }
 
 .bio {
-  /* flex-direction: column;
-  align-items: center; */
-  flex: 1;
+  width: 450px;
+  height: 450px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+
+.bio-info {
+  padding: 20px;
 }
 
 .note {
